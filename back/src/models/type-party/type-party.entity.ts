@@ -1,5 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne } from 'typeorm';
-import { Party } from './party.entity';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Party } from '../party/party.entity';
 
 @Entity()
 export class TypeParty {
@@ -21,6 +21,6 @@ export class TypeParty {
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createdAt: Date;
 
-  @ManyToOne(() => Party, (party) => party.typeParty)
+  @OneToMany(() => Party, (party) => party.typeParty)
   parties: Party[];
 }

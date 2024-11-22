@@ -68,7 +68,6 @@ module.exports = {
       "always",
       { "enforceForIfStatements": true }
     ],
-    "max-classes-per-file": ["error", { "ignoreExpressions": true }],
     "max-depth": ["error", 3],
     "max-lines-per-function": [
       "warn",

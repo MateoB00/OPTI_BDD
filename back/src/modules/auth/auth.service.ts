@@ -8,9 +8,8 @@ import { UserService } from '../user/user.service';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
-import { User } from 'src/models/user.entity';
+import { User } from 'src/models/user/user.entity';
 import { Repository } from 'typeorm';
-import { MailerService } from '@nestjs-modules/mailer';
 
 @Injectable()
 export class AuthService {
@@ -73,8 +72,8 @@ export class AuthService {
 
     const hashedPassword = await bcrypt.hash(user.password, 10);
 
-    return hashedPassword
-    // const newUser = {
+    return hashedPassword;
+    // Const newUser = {
     //   email: user.email,
     //   password: hashedPassword,
     //   username: user.username,

@@ -1,6 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne } from 'typeorm';
-import { User } from './user.entity';
-import { Party } from './party.entity';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import { User } from '../user/user.entity';
+import { Party } from '../party/party.entity';
 
 @Entity()
 export class Participant {

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Review } from 'src/models/review.entity';
+import { Review } from 'src/models/review/review.entity';
 import { ReviewController } from './review.controller';
 import { ReviewService } from './review.service';
 

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { CenterOfInterest } from 'src/models/center-of-interest.entity';
+import { CenterOfInterest } from 'src/models/center-of-interest/center-of-interest.entity';
 import { CenterOfInterestController } from './center-of-interest.controller';
 import { CenterOfInterestService } from './center-of-interest.service';
 

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Party } from 'src/models/party.entity';
+import { Party } from 'src/models/party/party.entity';
 import { PartyController } from './party.controller';
 import { PartyService } from './party.service';
 

@@ -1,29 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
-import {
-  Controller,
-  Post,
-  Body,
-  Header,
-  Res,
-  Get,
-  Redirect,
-  Param,
-  UseGuards,
-  Request,
-  BadRequestException,
-} from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
+import { Controller, Post, Body, Header, Res, Get } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { Response as ResponseType } from 'express';
-import { UserService } from '../user/user.service';
-import { User } from 'src/models/user.entity';
+import { User } from 'src/models/user/user.entity';
 
 @Controller('auth')
 export class AuthController {
-  constructor(
-    private authService: AuthService,
-  ) {
+  constructor(private authService: AuthService) {
     // Do nothing.
   }
 
@@ -51,7 +35,6 @@ export class AuthController {
   async register(@Body() user: User) {
     await this.authService.register(user);
   }
-
 
   // eslint-disable-next-line class-methods-use-this
   @Get('logout')

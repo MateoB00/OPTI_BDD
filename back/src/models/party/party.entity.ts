@@ -1,7 +1,16 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne } from 'typeorm';
-import { User } from './user.entity';
-import { TypeParty } from './type-party.entity';
-import { Participant } from './participant.entity';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToMany,
+  ManyToOne,
+} from 'typeorm';
+import { User } from '../user/user.entity';
+import { TypeParty } from '../type-party/type-party.entity';
+import { Participant } from '../participant/participant.entity';
+import { ContributionParty } from '../contribution-party/contribution-party.entity';
+import { Place } from '../place/place.entity';
+import { Review } from '../review/review.entity';
 
 @Entity()
 export class Party {
@@ -29,7 +38,7 @@ export class Party {
   @Column()
   contribution: boolean;
 
-  @Column({ type: 'timestamp'})
+  @Column({ type: 'timestamp' })
   startedAt: Date;
 
   @Column({ type: 'timestamp' })
@@ -44,6 +53,18 @@ export class Party {
   @ManyToOne(() => TypeParty, (typeParty) => typeParty.parties)
   typeParty: TypeParty;
 
+  @ManyToOne(() => Place, (place) => place.party)
+  place: Place;
+
   @OneToMany(() => Participant, (participant) => participant.party)
   participations: Participant[];
+
+  @OneToMany(
+    () => ContributionParty,
+    (contributionParty) => contributionParty.party,
+  )
+  contributionsParty: ContributionParty[];
+
+  @OneToMany(() => Review, (review) => review.targetParty)
+  reviews: Review[];
 }
