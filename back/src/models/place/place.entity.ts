@@ -4,10 +4,12 @@ import {
   Column,
   OneToMany,
   ManyToOne,
+  Index,
 } from 'typeorm';
 import { Party } from '../party/party.entity';
 import { User } from '../user/user.entity';
 
+@Index('idx_place_region', ['region'])
 @Entity()
 export class Place {
   @PrimaryGeneratedColumn()

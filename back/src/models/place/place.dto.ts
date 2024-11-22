@@ -1,9 +1,11 @@
+import { User } from '../user/user.entity';
+
 class PlaceCreateDto {
   address: string;
   city: string;
   postalCode: string;
   region: string;
-  userId: number;
+  user: User;
 }
 
 class PlaceUpdateDto {
@@ -11,7 +13,7 @@ class PlaceUpdateDto {
   city?: string;
   postalCode?: string;
   region?: string;
-  userId?: number;
+  user: User;
 }
 
 class PlaceResponseDto {

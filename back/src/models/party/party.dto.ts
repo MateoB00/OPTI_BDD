@@ -1,3 +1,7 @@
+import { Place } from '../place/place.entity';
+import { TypeParty } from '../type-party/type-party.entity';
+import { User } from '../user/user.entity';
+
 class PartyCreateDto {
   name: string;
   description: string;
@@ -7,9 +11,9 @@ class PartyCreateDto {
   contribution: boolean;
   startedAt: Date;
   endedAt: Date;
-  organizerId: number;
-  typePartyId: number;
-  placeId: number;
+  organizer: User;
+  typeParty: TypeParty;
+  place: Place;
 }
 
 class PartyUpdateDto {

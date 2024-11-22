@@ -1,6 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  Index,
+} from 'typeorm';
 import { User } from '../user/user.entity';
 
+@Index('idx_message_read', ['read'])
 @Entity()
 export class Message {
   @PrimaryGeneratedColumn()

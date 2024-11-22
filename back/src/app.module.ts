@@ -19,6 +19,7 @@ import { Party } from './models/party/party.entity';
 import { Place } from './models/place/place.entity';
 import { Review } from './models/review/review.entity';
 import { TypeParty } from './models/type-party/type-party.entity';
+import { PartyParticipantSummary } from './models/party-participant-summary/party-participant-summary.entity';
 
 @Module({
   imports: [
@@ -40,8 +41,11 @@ import { TypeParty } from './models/type-party/type-party.entity';
           Place,
           Review,
           TypeParty,
+          PartyParticipantSummary,
         ],
         synchronize: true,
+        logging: ['query', 'error', 'schema'],
+        logger: 'file',
       }),
     }),
     UserModule,

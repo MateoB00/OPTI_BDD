@@ -72,19 +72,16 @@ export class AuthService {
 
     const hashedPassword = await bcrypt.hash(user.password, 10);
 
-    return hashedPassword;
-    // Const newUser = {
-    //   email: user.email,
-    //   password: hashedPassword,
-    //   username: user.username,
-    //   phoneNumber: 'default number',
-    //   profilePicture: './default_profile_icon.png',
-    //   bio: 'default bio',
-    //   uniqueLink: `${user.username}-${Math.floor(Math.random() * 1000)}`,
-    // };
+    const newUser = {
+      email: user.email,
+      password: hashedPassword,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      age: user.age,
+    };
 
-    // const createdUser = await this.userRepository.save(newUser);
+    const createdUser = await this.userRepository.save(newUser);
 
-    // return createdUser;
+    return createdUser;
   }
 }

@@ -1,6 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToMany,
+  Index,
+} from 'typeorm';
 import { Party } from '../party/party.entity';
 
+@Index('idx_typeParty_type', ['type'])
 @Entity()
 export class TypeParty {
   @PrimaryGeneratedColumn()

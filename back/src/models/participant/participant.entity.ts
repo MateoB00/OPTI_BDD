@@ -1,7 +1,14 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  Index,
+} from 'typeorm';
 import { User } from '../user/user.entity';
 import { Party } from '../party/party.entity';
 
+@Index('idx_participant_status', ['status'])
 @Entity()
 export class Participant {
   @PrimaryGeneratedColumn()

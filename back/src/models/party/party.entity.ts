@@ -4,6 +4,7 @@ import {
   Column,
   OneToMany,
   ManyToOne,
+  Index,
 } from 'typeorm';
 import { User } from '../user/user.entity';
 import { TypeParty } from '../type-party/type-party.entity';
@@ -13,6 +14,11 @@ import { Place } from '../place/place.entity';
 import { Review } from '../review/review.entity';
 
 @Entity()
+@Index('idx_party_status', ['status'])
+@Index('idx_party_started', ['startedAt'])
+@Index('idx_party_organizer', ['organizer'])
+@Index('idx_party_typeParty', ['typeParty'])
+@Index('idx_party_place', ['place'])
 export class Party {
   @PrimaryGeneratedColumn()
   id: number;
