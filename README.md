@@ -195,7 +195,7 @@ Une authentification avec JWT est mis en place.
 
 # Disclaimer
 
-Seulement le module des entités Place,User,Party et TypeParty est terminé.
+Seulement les modules Place,User,Party,TypeParty et Auth sont terminés.
 
 # MCD SCHÉMA
 ![MCD](https://github.com/user-attachments/assets/1d05bc2e-076e-4252-a56d-f46578880145)
