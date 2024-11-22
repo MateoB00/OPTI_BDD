@@ -193,5 +193,6 @@ back/src/modules/party/party.controller.ts
 
 Une authentification avec JWT est mis en place.
 
+# MCD SCHÉMA
 ![MCD](https://github.com/user-attachments/assets/1d05bc2e-076e-4252-a56d-f46578880145)
 
