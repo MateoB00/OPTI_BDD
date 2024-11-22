@@ -185,9 +185,8 @@ CacheModule.register({
   max: 100, // Taille maximale du cache
 ```
 
-![MCD](https://github.com/user-attachments/assets/1d05bc2e-076e-4252-a56d-f46578880145)
-})
-```
-
 Le cache est mis en place pour deux routes, notamment les getAll des parties, mais aussi celle avec pagination.
 back/src/modules/party/party.controller.ts
+
+![MCD](https://github.com/user-attachments/assets/1d05bc2e-076e-4252-a56d-f46578880145)
+})
