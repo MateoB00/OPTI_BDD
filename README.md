@@ -183,10 +183,11 @@ Le cache est configuré dans le module `PartyModule` avec la bibliothèque **cac
 CacheModule.register({
   ttl: 5, // Durée de vie par défaut du cache en secondes
   max: 100, // Taille maximale du cache
+})
 ```
 
 Le cache est mis en place pour deux routes, notamment les getAll des parties, mais aussi celle avec pagination.
 back/src/modules/party/party.controller.ts
 
 ![MCD](https://github.com/user-attachments/assets/1d05bc2e-076e-4252-a56d-f46578880145)
-})
+
