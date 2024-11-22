@@ -1,4 +1,3 @@
-![MCD](https://github.com/user-attachments/assets/1d05bc2e-076e-4252-a56d-f46578880145)
 # Projet NestJS - Gestion des Soirées 
 ## Installation
 ### Prérequis
@@ -184,6 +183,9 @@ Le cache est configuré dans le module `PartyModule` avec la bibliothèque **cac
 CacheModule.register({
   ttl: 5, // Durée de vie par défaut du cache en secondes
   max: 100, // Taille maximale du cache
+```
+
+![MCD](https://github.com/user-attachments/assets/1d05bc2e-076e-4252-a56d-f46578880145)
 })
 ```
 
