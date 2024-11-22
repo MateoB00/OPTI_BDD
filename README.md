@@ -1,3 +1,4 @@
+![MCD](https://github.com/user-attachments/assets/1d05bc2e-076e-4252-a56d-f46578880145)
 # Projet NestJS - Gestion des Soirées 
 ## Installation
 ### Prérequis
